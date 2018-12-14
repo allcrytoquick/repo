@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@drawable/round_style"
+                    android:orientation="horizontal"
+                    android:transitionName="simple_fragment_transition">
+                    <!-->btc button<-->
+                    <Button
+                        android:id="@+id/ic_dash_btn_btc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dashboard_pressed"
+                        android:onClick="tab_Onclick"
+
+                        android:text="BTC"
+
+                        android:textColor="@color/text_color" />
+                    <!-->eth button<-->
+                    <Button
+                        android:id="@+id/ic_dash_btn_eth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:width="1dp"
+
+                        android:background="#00000000"
+                        android:onClick="tab_Onclick"
+                        android:text="ETHEREUM"
+
+                        android:textColor="@color/text_color" />
+                    <!-->ltc button<-->
+                    <Button
+                        android:id="@+id/ic_dash_btn_ltc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:width="1dp"
+                        android:background="#00000000"
+                        android:onClick="tab_Onclick"
+                        android:text="Litecoin"
+
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <!-->bitcoin price<-->
+                    <TextView
+
+                        android:id="@+id/tv_coin_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="bitcoin price"
+                        android:textAllCaps="true"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <!-->bitcoin price value<-->
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14000 USD"
+                        android:textColor="#777777"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                    <!-->date<-->
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="30 dec, 2017"
+                        android:textAllCaps="true"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <!-->buy order button<-->
+                    <Button
+                        android:id="@+id/btn_buy_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/dashboard_buy_sell_button_bg_selected"
+                        android:onClick="btn_onClick"
+                        android:text="Buy Order"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                    <!-->sell order button<-->
+                    <Button
+                        android:id="@+id/btn_sell_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/dashboard_buy_sell_button_bg_normal"
+                        android:onClick="btn_onClick"
+                        android:text="Sell Order"
+                        android:textAllCaps="true"
+                        android:textColor="#E57616"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <!-->last month price text<-->
+                            <TextView
+                                android:id="@+id/tv_last_month_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14000 USD"
+                                android:textAllCaps="false"
+                                android:textColor="#777777"
+                                android:textSize="18sp" />
+                            <!-->price arrow icon<-->
+                            <ImageView
+                                android:id="@+id/arrow_last_month"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+
+                                android:src="@drawable/arrow_dashboard" />
+
+                        </LinearLayout>
+                        <!-->since last month text<-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Since Last Month"
+                            android:textAllCaps="false"
+                            android:textColor="#777777"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <!-->high text<-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="High"
+                            android:textAllCaps="true"
+                            android:textColor="#777777"
+                            android:textSize="18dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <!-->market prediction<-->
+                            <TextView
+                                android:id="@+id/tv_last_week_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Market Prediction"
+                                android:textAllCaps="false"
+                                android:textColor="#777777"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1.2dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#EA8733" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp">
+                        <!-->1 hour button<-->
+                        <Button
+                            android:id="@+id/btn_one_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:onClick="btn_onClick"
+                            android:text="1H"
+                            android:textColor="#777777" />
+                        <!-->1 day button<-->
+                        <Button
+                            android:id="@+id/btn_one_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:onClick="btn_onClick"
+                            android:text="1D"
+                            android:textColor="#777777" />
+                        <!-->1 week button<-->
+                        <Button
+                            android:id="@+id/btn_one_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_border"
+                            android:onClick="btn_onClick"
+                            android:text="1W"
+                            android:textColor="#777777" />
+                        <!-->1 month button<-->
+                        <Button
+                            android:id="@+id/btn_one_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:onClick="btn_onClick"
+                            android:text="1M"
+                            android:textColor="#777777" />
+                        <!-->1 year button<-->
+                        <Button
+                            android:id="@+id/btn_one_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:onClick="btn_onClick"
+                            android:text="1Y"
+                            android:textColor="#777777" />
+                        <!-->2 year button<-->
+                        <Button
+                            android:id="@+id/btn_two_years"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:onClick="btn_onClick"
+                            android:text="2Y"
+                            android:textColor="#777777" />
+                        <!-->3 year button<-->
+                        <Button
+                            android:id="@+id/btn_three_years"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:onClick="btn_onClick"
+                            android:text="3Y"
+                            android:textColor="#777777" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <!-->Value line chart<-->
+                    <org.eazegraph.lib.charts.ValueLineChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/linechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:egCurveSmoothness="0.4"
+                        app:egIndicatorLineColor="@color/cardview_dark_background"
+                        app:egLegendHeight="40dp"
+                        app:egShowStandardValue="true"
+                        app:egUseCubic="true"
+                        app:egUseOverlapFill="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

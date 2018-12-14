@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.coinhub.ActivityPackage.ProfileActivity"
+    tools:showIn="@layout/activity_profile">
+    <!-->background image<-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <!-->back arrow image button <-->
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/btn_back"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/arrow_white" />
+            <!-->profile text<-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="65dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-->profile image<-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:id="@+id/imageView_profile"
+            android:elevation="10dp"
+            android:transitionName="simple_activity_transition"
+            android:src="@drawable/profile_demo" />
+        <!-->profile name <-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="Jhon Cena"
+            android:textColor="#757575"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <!-->profile country <-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="USA"
+            android:textSize="18dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <!-->followers button <-->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/profile_item_bg"
+                android:text="Followers\n909"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="12dp" />
+            <!-->follow button <-->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/profile_item_bg_middle"
+                android:text="Follow"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="12dp" />
+            <!-->following button <-->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/profile_item_bg"
+                android:text="Following\n1200"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <!-->email text <-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#EEEEEE"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Email"
+            android:textSize="18dp" />
+
+
+        <!-->email input field <-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:hint="example@email.com"
+            android:padding="5dp"
+            android:textSize="18dp" />
+
+        <!-->phone number text<-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:background="#EEEEEE"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Phone Number"
+            android:textSize="18dp" />
+
+
+        <!-->phone number input field<-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:inputType="phone"
+            android:hint="+100000000000"
+            android:padding="5dp"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+        <!-->Member since 2018 text <-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#363636"
+            android:gravity="center"
+            android:text="Member Since 2018"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <!-->amount of bitcoin <-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount of Bitcoin :"
+            android:textColor="#585858"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="#EEEEEE"
+            android:orientation="horizontal">
+            <!-->bitcoin text<-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="Bitcoin"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="#CECECE"></View>
+            <!-->bitcoin input field<-->
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="#00000000"
+                android:gravity="center"
+                android:hint="10"
+                android:inputType="number"
+                android:textSize="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="#5A5A5A"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!-->price text<-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Price :"
+            android:textSize="15dp"
+            android:textColor="#585858" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="#EEEEEE"
+            android:orientation="horizontal">
+            <!-->price<-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="Price"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="#CECECE"></View>
+            <!-->price input field<-->
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:textSize="15dp"
+                android:background="#00000000"
+                android:gravity="center"
+                android:hint="10000"
+                android:paddingLeft="5dp"
+                android:inputType="number"
+                android:paddingRight="5dp"
+                android:textColor="#5A5A5A"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#393939"
+            android:orientation="vertical">
+            <!-->fees<-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="18dp"
+                android:text="Fees : 1.00 $"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#656565"></View>
+            <!-->total amount<-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:text="Total Amount : 100010.00 $"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!-->buy now button<-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="Buy Now"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_style"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</LinearLayout>

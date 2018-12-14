@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:orientation="horizontal">
+        <!-->buy or sell icon<-->
+        <ImageView
+            android:id="@+id/imageView_buy_or_sell"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:src="@drawable/buy" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-->sell or buy bitcoin text<-->
+            <TextView
+                android:id="@+id/tv_sell_or_buy_bitcoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sell BitCoin" />
+            <!-->using visa debit card text<-->
+            <TextView
+                android:id="@+id/tv_card_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="using visa debit card *****976" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-->amount<-->
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingRight="10dp"
+                android:text="2.01454655" />
+            <!-->total<-->
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingRight="10dp"
+                android:text="$28.526 k" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8C8C8C"></View>
+</LinearLayout>

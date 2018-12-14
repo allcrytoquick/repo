@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coinhub.ActivityPackage.ShowcaseActivity">
+
+    <!-- status bar view -->
+    <com.coinhub.UtilPackage.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/splash_status_bar_bg" />
+
+    <!-- including content showcase layout -->
+    <include layout="@layout/content_showcase" />
+
+
+</android.support.design.widget.CoordinatorLayout>

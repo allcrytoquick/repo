@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+        <!-->send or deposit button<-->
+        <Button
+            android:id="@+id/btn_send_or_deposit"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/logout_background"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+    <!-->amounts balance<-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Amounts Balance"
+        android:textColor="#707070"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="70dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#F8A058"></View>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <!-->amounts balance value<-->
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="250135"
+            android:textColor="#494949"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <!-->amounts balance name<-->
+        <TextView
+            android:id="@+id/tv_coin_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="Bitcoin"
+            android:textAllCaps="true"
+            android:textColor="#707070"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="#EAEAEA"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <!-->transaction history text<-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="Transaction History"
+            android:textColor="#4A4A4A"
+            android:textStyle="bold" />
+        <!-->last month text<-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="end"
+            android:text="Last Month"
+            android:textColor="#4A4A4A"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!-->recycler view for showing transaction history list<-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_transaction_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

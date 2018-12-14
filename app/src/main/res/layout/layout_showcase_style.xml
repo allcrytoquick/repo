@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!-->linear layout whose background image will change <-->
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="250dp"
+        android:layout_margin="5dp">
+        <!-->image view for bg<-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/image_view_bg"
+            android:src="@drawable/storyboard1" />
+        <!-->crypto currency text  <-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Crypto Currency is the Real Business World"
+            android:textColor="#FCF5F0"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

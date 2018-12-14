@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coinhub.ActivityPackage.SettingsActivity">
+
+    <!-- contain the custom status bar in app bar layout -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <!-- status bar -->
+        <com.coinhub.UtilPackage.StatusBarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/splash_status_bar_bg" />
+    </android.support.design.widget.AppBarLayout>
+    <!-- contain the content layout settings-->
+    <include layout="@layout/content_settings" />
+
+
+</android.support.design.widget.CoordinatorLayout>

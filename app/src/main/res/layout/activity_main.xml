@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?><!-- drawer layout for navigation and contents -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start">
+    <!-- including the content layout app bar main -->
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- customized navigation view -->
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+        <!-- navigation drawer all items starts here  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/splash_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <!-->navigation drawer profile image<-->
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/profile_demo"
+                    android:transitionName="simple_activity_transition" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+                    <!-->navigation drawer profile Name<-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="John Cena"
+                        android:textColor="#6C6C6C"
+                        android:textSize="18dp" />
+                    <!-->navigation drawer profile email<-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:text="example@email.com"
+                        android:textColor="#6C6C6C" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <!-->navigation drawer profile button<-->
+                        <ImageButton
+                            android:id="@+id/btn_profile"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/nav_button_bg"
+                            android:padding="7dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/profile"
+                            android:tint="#d7a77e" />
+
+                        <!-->navigation drawer settings button<-->
+                        <ImageButton
+                            android:id="@+id/btn_settings"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/nav_button_bg"
+                            android:padding="7dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/settings"
+                            android:tint="#d7a77e" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-->navigation drawer close button<-->
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#00000000"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cross" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="#F68121">
+                <!-->navigation drawer today price text<-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#EC7A19"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Today Price"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <!-->navigation drawer price drop down<-->
+
+                <Spinner
+                    android:id="@+id/spinner_coin_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/spinner_background"
+
+                    android:gravity="center"
+                    android:popupBackground="#F68121"
+                    android:popupElevation="10dp"></Spinner>
+
+                <!-->navigation drawer = text<-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="="
+                    android:textColor="#ffffff"
+                    android:textSize="17dp" />
+
+                <!-->navigation drawer coin price <-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="14,000 $"
+                    android:textColor="#ffffff"
+
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:transitionName="simple_fragment_transition">
+
+                    <!-->navigation drawer dashboard<-->
+                    <TextView
+                        android:id="@+id/tv_heading_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center|start"
+
+                        android:text="@string/dashboard"
+                        android:textAllCaps="true"
+                        android:textColor="#686868"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+
+                        android:background="#BDBDBD"></View>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-->navigation drawer wallets accounts<-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Wallets Accounts"
+                        android:textAllCaps="true"
+                        android:textColor="#686868"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#BDBDBD"></View>
+
+                </LinearLayout>
+                <!-->navigation drawer single item place holder view<-->
+                <com.mindorks.placeholderview.PlaceHolderView
+                    android:id="@+id/placeholder_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.mindorks.placeholderview.PlaceHolderView>
+
+                <!-->navigation drawer expandable item place holder view <-->
+
+                <com.mindorks.placeholderview.ExpandablePlaceHolderView
+                    android:id="@+id/expandable_place_holder_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.mindorks.placeholderview.ExpandablePlaceHolderView>
+
+                <!-->navigation drawer logout<-->
+                <LinearLayout
+                    android:id="@+id/layout_logout"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/logout_background"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <!-->navigation drawer logout text<-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Log out"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+
+                        android:textSize="15dp" />
+                    <!-->navigation drawer logout icon<-->
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="5dp"
+
+                        android:src="@drawable/logout" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
